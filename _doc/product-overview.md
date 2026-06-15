@@ -130,13 +130,20 @@ Platform operator with full governance, approval authority, and oversight.
 
 ---
 
-## MVP Scope (Phase 1)
+## What Shipped (Initial Build)
 
-1. Full customer ordering flow — browse → cart → checkout → real-time tracking
-2. Shop owner dashboard — profile setup, product management, order acceptance, basic analytics
-3. Admin dashboard — shop approvals, user / shop / order management, platform overview
-4. All 7 database collections scaffolded
-5. Secure role-based authentication (3 roles)
-6. Push notification infrastructure
-7. Payment gateway integration
-8. Location support for shop discovery
+1. Full customer ordering flow — browse → single-shop cart → checkout (payment method + delivery address) → real-time order tracking (polling-based timeline)
+2. Shop owner dashboard — profile setup (logo + cover upload, business hours), product CRUD with images + inventory, order management (accept / reject / preparing / out-for-delivery / complete), four KPI tiles (Total Orders / Revenue / Active Products / Reviews)
+3. Admin dashboard — shop approvals, user / shop / order management, platform overview with 7-day revenue chart, broadcast notifications by audience
+4. All 7 database collections scaffolded (Users, Shops, Products, Orders, Payments, Notifications, Reviews)
+5. Secure role-based authentication — 3 roles via JWT httpOnly cookie (`profile.appRole`)
+6. Customer star ratings & reviews, shown on shop detail pages
+7. Server-side order re-pricing to prevent tampering; idempotent demo seed (5 shops with products/reviews + a demo customer)
+
+## Staged Next (Not Yet Built)
+
+Captured as goals; not part of the initial build:
+
+- **Real payment gateway integration** — checkout currently records a payment method and a Payment model entry; live in-app charging (Stripe / Razorpay / etc.) is the next feature, pending provider choice.
+- **Location services** — location-based shop discovery and live delivery-location tracking are not yet implemented.
+- **Device push delivery** — notification records and broadcast targeting exist; real device push delivery is a future enhancement.
