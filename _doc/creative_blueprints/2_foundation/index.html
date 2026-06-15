@@ -1,0 +1,68 @@
+<style>
+.mode-landscape .sl-split { flex-direction: row; gap: 2.5rem; }
+.mode-portrait .sl-split { flex-direction: column; gap: 1.25rem; }
+.mode-landscape .sl-col { flex: 1; }
+.mode-portrait .sl-col { flex: 1; }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full" style="padding: 2.75rem 3rem;">
+
+    <!-- Slide header -->
+    <div class="flex items-center gap-3 mb-7">
+      <div class="rounded-full" style="width:5px; height:2rem; background:#FF6B35; flex-shrink:0;"></div>
+      <div>
+        <p class="text-xs font-bold uppercase text-slate-400" style="letter-spacing:0.13em; margin-bottom:2px;">Strategic Foundation</p>
+        <h2 class="font-black text-slate-900" style="font-size:1.5rem; line-height:1.2;">From Fragmented to Unified</h2>
+      </div>
+    </div>
+
+    <!-- Problem / Solution split -->
+    <div class="sl-split flex flex-1">
+
+      <!-- Problem column -->
+      <div class="sl-col flex flex-col">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="flex items-center justify-center w-6 h-6 rounded-full text-white text-xs font-black" style="background:#EF4444; flex-shrink:0;">✗</div>
+          <h3 class="font-bold text-slate-800 text-base">The Problem</h3>
+        </div>
+        <div class="flex flex-col gap-3 flex-1">
+          <div class="p-4 rounded-xl" style="background:#FFF8F6; border:1px solid #FFDDD0;">
+            <p class="text-sm font-semibold text-slate-800 mb-1">No digital channel for local shops</p>
+            <p class="text-xs text-slate-500 leading-relaxed">Most local shops and restaurants operate offline — losing customers who expect to browse and order digitally, with no scalable way to manage orders.</p>
+          </div>
+          <div class="p-4 rounded-xl" style="background:#FFF8F6; border:1px solid #FFDDD0;">
+            <p class="text-sm font-semibold text-slate-800 mb-1">Fragmented customer experience</p>
+            <p class="text-xs text-slate-500 leading-relaxed">Finding and ordering from multiple local vendors requires separate channels — creating friction, wasted time, and abandoned purchase intent.</p>
+          </div>
+          <div class="p-4 rounded-xl" style="background:#FFF8F6; border:1px solid #FFDDD0;">
+            <p class="text-sm font-semibold text-slate-800 mb-1">No platform-level visibility</p>
+            <p class="text-xs text-slate-500 leading-relaxed">Without a unified marketplace, operators can't approve vendors, monitor order health, or enforce consistent quality standards at scale.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Solution column -->
+      <div class="sl-col flex flex-col">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="flex items-center justify-center w-6 h-6 rounded-full text-white text-xs font-black" style="background:#16A34A; flex-shrink:0;">✓</div>
+          <h3 class="font-bold text-slate-800 text-base">The Solution</h3>
+        </div>
+        <div class="flex flex-col gap-3 flex-1">
+          <div class="p-4 rounded-xl" style="background:#F0FDF4; border:1px solid #BBF7D0;">
+            <p class="text-sm font-semibold text-slate-800 mb-1">A digital storefront for every shop</p>
+            <p class="text-xs text-slate-500 leading-relaxed">Shop owners get a complete dashboard to manage their profile, products, orders, and analytics — no technical expertise required.</p>
+          </div>
+          <div class="p-4 rounded-xl" style="background:#F0FDF4; border:1px solid #BBF7D0;">
+            <p class="text-sm font-semibold text-slate-800 mb-1">One seamless app for every customer</p>
+            <p class="text-xs text-slate-500 leading-relaxed">Customers discover local shops, browse menus, pay securely, and track orders in real time — all inside a single mobile-first experience.</p>
+          </div>
+          <div class="p-4 rounded-xl" style="background:#F0FDF4; border:1px solid #BBF7D0;">
+            <p class="text-sm font-semibold text-slate-800 mb-1">Full admin oversight, end-to-end</p>
+            <p class="text-xs text-slate-500 leading-relaxed">Platform admins approve shops, monitor the order network, manage users, and send targeted notifications from a single control panel.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
