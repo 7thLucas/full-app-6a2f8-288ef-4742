@@ -1,0 +1,66 @@
+<style>
+.mode-landscape .sl-layout { flex-direction: row; }
+.mode-portrait .sl-layout { flex-direction: column; }
+.mode-landscape .sl-left { width: 52%; }
+.mode-landscape .sl-right { width: 48%; }
+.mode-portrait .sl-left { height: 55%; width: 100%; }
+.mode-portrait .sl-right { height: 45%; width: 100%; }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- Left content column -->
+    <div class="sl-left flex flex-col justify-between bg-white" style="padding: 3rem;">
+      <div>
+        <span class="inline-block px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-widest" style="background:#FF6B35; letter-spacing:0.1em;">
+          Multi-Vendor Marketplace
+        </span>
+      </div>
+
+      <div>
+        <h1 class="font-black text-slate-900 mb-4" style="font-size:2.9rem; line-height:1.08;">
+          Your City's<br/>Every Shop,<br/><span style="color:#FF6B35;">One App.</span>
+        </h1>
+        <p class="text-slate-500 leading-relaxed text-sm mb-6" style="max-width:21rem;">
+          A complete mobile commerce platform connecting customers, local shop owners, and platform admins — from discovery to doorstep.
+        </p>
+        <div class="flex gap-2 flex-wrap">
+          <span class="px-3 py-1 rounded-full text-xs font-semibold text-slate-700" style="background:#FFF3EC; border:1px solid #FFD5B8;">Customer</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold text-slate-700" style="background:#FFF3EC; border:1px solid #FFD5B8;">Shop Owner</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold text-slate-700" style="background:#FFF3EC; border:1px solid #FFD5B8;">Admin</span>
+        </div>
+      </div>
+
+      <div>
+        <data-attribution />
+      </div>
+    </div>
+
+    <!-- Right visual panel -->
+    <div class="sl-right relative overflow-hidden" style="background:#0f172a;">
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=smartphone+screen+food+delivery+marketplace+app+orange+theme+modern+clean+UI+professional+dark+background+glowing"
+        class="w-full h-full object-cover"
+        style="opacity:0.65;"
+      />
+      <div class="absolute inset-0" style="background:linear-gradient(150deg, rgba(255,107,53,0.18) 0%, rgba(15,23,42,0.55) 70%);"></div>
+
+      <!-- Stat pills overlay -->
+      <div class="absolute flex flex-col gap-2" style="bottom:2.5rem; right:2rem;">
+        <div class="px-4 py-2 rounded-xl text-white text-sm font-bold" style="background:rgba(255,107,53,0.95);">
+          Android &amp; iOS
+        </div>
+        <div class="px-4 py-2 rounded-xl text-white text-sm font-medium" style="background:rgba(255,255,255,0.14); backdrop-filter:blur(6px);">
+          3 User Roles
+        </div>
+        <div class="px-4 py-2 rounded-xl text-white text-sm font-medium" style="background:rgba(255,255,255,0.14); backdrop-filter:blur(6px);">
+          7 Data Collections
+        </div>
+        <div class="px-4 py-2 rounded-xl text-white text-sm font-medium" style="background:rgba(255,255,255,0.14); backdrop-filter:blur(6px);">
+          Real-Time Order Tracking
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
