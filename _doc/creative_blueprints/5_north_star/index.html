@@ -1,0 +1,117 @@
+<style>
+.mode-landscape .sl-body { flex-direction: row; gap: 2.5rem; }
+.mode-portrait .sl-body { flex-direction: column; gap: 1.5rem; }
+.mode-landscape .sl-left { width: 55%; }
+.mode-landscape .sl-right { width: 45%; }
+.mode-portrait .sl-left { width: 100%; }
+.mode-portrait .sl-right { width: 100%; }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full" style="padding: 2.75rem 3rem;">
+
+    <!-- Slide header -->
+    <div class="flex items-center justify-between mb-5">
+      <div class="flex items-center gap-3">
+        <div class="rounded-full" style="width:5px; height:2rem; background:#FF6B35; flex-shrink:0;"></div>
+        <div>
+          <p class="text-xs font-bold uppercase text-slate-400" style="letter-spacing:0.13em; margin-bottom:2px;">North Star Metric</p>
+          <h2 class="font-black text-slate-900" style="font-size:1.5rem; line-height:1.2;">Weekly Verified Orders</h2>
+        </div>
+      </div>
+      <span class="px-3 py-1 rounded-full text-xs font-semibold text-amber-700" style="background:#FEF3C7; border:1px solid #FCD34D;">
+        Projected impact — based on your inputs
+      </span>
+    </div>
+
+    <!-- Body -->
+    <div class="sl-body flex flex-1">
+
+      <!-- Left: formula and WVO -->
+      <div class="sl-left flex flex-col gap-4">
+
+        <!-- What counts as a verified order -->
+        <div class="p-4 rounded-xl" style="background:#FFF3EC; border:1px solid #FFD5B8;">
+          <p class="text-xs font-bold uppercase tracking-wide mb-2" style="color:#FF6B35; letter-spacing:0.1em;">Verified Operation</p>
+          <p class="text-sm font-semibold text-slate-800 mb-1">Customer Order Confirmed</p>
+          <p class="text-xs text-slate-500 leading-relaxed">An order placed by a customer, accepted by a shop owner, and confirmed in the platform — the event the entire app is built to deliver.</p>
+          <div class="mt-2 flex gap-2 flex-wrap">
+            <span class="px-2 py-0.5 rounded text-xs font-medium text-slate-600" style="background:#e2e8f0;">Not counted: logins</span>
+            <span class="px-2 py-0.5 rounded text-xs font-medium text-slate-600" style="background:#e2e8f0;">Not counted: page views</span>
+            <span class="px-2 py-0.5 rounded text-xs font-medium text-slate-600" style="background:#e2e8f0;">Not counted: registrations</span>
+          </div>
+        </div>
+
+        <!-- WVO formula -->
+        <div class="p-4 rounded-xl border border-slate-200" style="background:#f8fafc;">
+          <p class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-3" style="letter-spacing:0.1em;">Weekly Volume Formula</p>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-1 rounded text-xs font-bold text-amber-700" style="background:#FEF3C7; border:1px solid #FCD34D;">Assumption — adjust this</span>
+              <span class="text-sm text-slate-700">10 shops active on the platform</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-1 rounded text-xs font-bold text-amber-700" style="background:#FEF3C7; border:1px solid #FCD34D;">Assumption — adjust this</span>
+              <span class="text-sm text-slate-700">20 orders per shop per day</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-1 rounded text-xs font-bold text-slate-500" style="background:#f1f5f9;">Fixed</span>
+              <span class="text-sm text-slate-700">7 days per week</span>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-200 flex items-center gap-2">
+            <span class="text-xs text-slate-500">10 shops × 20 orders/day × 7 days =</span>
+            <span class="text-xl font-black text-slate-900">1,400</span>
+            <span class="text-sm font-semibold text-slate-600">orders / week</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: value derivation -->
+      <div class="sl-right flex flex-col gap-4">
+
+        <!-- Value per order -->
+        <div class="p-4 rounded-xl border border-slate-200" style="background:#f8fafc;">
+          <p class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-3" style="letter-spacing:0.1em;">Value per Verified Order</p>
+          <div class="space-y-2 mb-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-1 rounded text-xs font-bold text-amber-700" style="background:#FEF3C7; border:1px solid #FCD34D;">Assumption — adjust this</span>
+              <span class="text-sm text-slate-700">Avg. order value: $15</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-1 rounded text-xs font-bold text-amber-700" style="background:#FEF3C7; border:1px solid #FCD34D;">Assumption — adjust this</span>
+              <span class="text-sm text-slate-700">Platform commission: 10%</span>
+            </div>
+          </div>
+          <div class="pt-3 border-t border-slate-200">
+            <span class="text-xs text-slate-500">$15 × 10% =</span>
+            <span class="text-base font-black text-slate-900 ml-1">$1.50</span>
+            <span class="text-xs text-slate-500 ml-1">revenue per order</span>
+          </div>
+        </div>
+
+        <!-- Projected totals -->
+        <div class="p-4 rounded-2xl flex-1 flex flex-col justify-between" style="background:#0f172a;">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-wide mb-4" style="color:rgba(255,255,255,0.5); letter-spacing:0.1em;">Projected Platform Revenue</p>
+            <div class="mb-4">
+              <p class="text-xs mb-1" style="color:rgba(255,255,255,0.5);">1,400 orders/wk × $1.50</p>
+              <div class="text-white font-black" style="font-size:2rem; line-height:1;">$2,100</div>
+              <p class="text-sm font-medium" style="color:rgba(255,107,53,0.9);">per week</p>
+            </div>
+            <div>
+              <p class="text-xs mb-1" style="color:rgba(255,255,255,0.5);">$2,100 × 52 weeks</p>
+              <div class="text-white font-black" style="font-size:2rem; line-height:1;">$109,200</div>
+              <p class="text-sm font-medium" style="color:rgba(255,107,53,0.9);">per year</p>
+            </div>
+          </div>
+          <div class="pt-3 border-t" style="border-color:rgba(255,255,255,0.1);">
+            <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.45);">All figures are projections derived from the assumption inputs above. Replace with your real shop count, order volume, and commission rate to get your actual numbers.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
