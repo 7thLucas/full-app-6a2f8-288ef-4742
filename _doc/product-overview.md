@@ -1,6 +1,6 @@
 # Multi-Vendor Marketplace Platform
 
-> **App Name:** TBD (placeholder: [Your App Name])
+> **App Name:** Tester
 > **Category:** Multi-vendor marketplace / on-demand mobile commerce
 > **Platform:** Android & iOS (cross-platform responsive mobile app)
 > **Reference model:** Swiggy / Zomato
