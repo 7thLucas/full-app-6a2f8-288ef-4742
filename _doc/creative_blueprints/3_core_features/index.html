@@ -1,0 +1,182 @@
+<input type="radio" name="persona" id="p-customer" checked style="display:none;">
+<input type="radio" name="persona" id="p-owner" style="display:none;">
+<input type="radio" name="persona" id="p-admin" style="display:none;">
+
+<style>
+/* Default: all panels hidden */
+.feat-panel { display: none; }
+
+/* Show active panel */
+#p-customer:checked ~ section .feat-panel.for-customer { display: grid; }
+#p-owner:checked   ~ section .feat-panel.for-owner    { display: grid; }
+#p-admin:checked   ~ section .feat-panel.for-admin    { display: grid; }
+
+/* Persona chip: default style */
+#p-customer:checked ~ section label[for="p-customer"],
+#p-owner:checked   ~ section label[for="p-owner"],
+#p-admin:checked   ~ section label[for="p-admin"] {
+  background: #FF6B35;
+  color: white;
+  border-color: #FF6B35;
+}
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full" style="padding: 2.75rem 3rem;">
+
+    <!-- Slide header -->
+    <div class="flex items-center gap-3 mb-5">
+      <div class="rounded-full" style="width:5px; height:2rem; background:#FF6B35; flex-shrink:0;"></div>
+      <div>
+        <p class="text-xs font-bold uppercase text-slate-400" style="letter-spacing:0.13em; margin-bottom:2px;">Platform Features</p>
+        <h2 class="font-black text-slate-900" style="font-size:1.5rem; line-height:1.2;">Three Roles, One Platform</h2>
+      </div>
+    </div>
+
+    <!-- Persona chips (tab triggers) -->
+    <div class="flex gap-3 mb-6">
+      <label for="p-customer" class="px-4 py-2 rounded-full text-sm font-semibold cursor-pointer transition-all text-slate-600" style="background:#f1f5f9; border:1.5px solid #e2e8f0;">
+        Customer
+      </label>
+      <label for="p-owner" class="px-4 py-2 rounded-full text-sm font-semibold cursor-pointer transition-all text-slate-600" style="background:#f1f5f9; border:1.5px solid #e2e8f0;">
+        Shop Owner
+      </label>
+      <label for="p-admin" class="px-4 py-2 rounded-full text-sm font-semibold cursor-pointer transition-all text-slate-600" style="background:#f1f5f9; border:1.5px solid #e2e8f0;">
+        Admin
+      </label>
+    </div>
+
+    <!-- CUSTOMER panel -->
+    <div class="feat-panel for-customer grid-cols-4 gap-3 flex-1" style="grid-template-rows: repeat(2, 1fr);">
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#FFF3EC; border:1px solid #FFD5B8;">
+        <p class="text-xs font-bold text-orange-500 uppercase tracking-wide">Discovery</p>
+        <p class="text-sm font-semibold text-slate-800">Home &amp; Search</p>
+        <p class="text-xs text-slate-500">Banner slider, categories, featured shops, and recommended products on one home screen.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#FFF3EC; border:1px solid #FFD5B8;">
+        <p class="text-xs font-bold text-orange-500 uppercase tracking-wide">Browse</p>
+        <p class="text-sm font-semibold text-slate-800">Shop &amp; Menu Listing</p>
+        <p class="text-xs text-slate-500">Shop listing and detail pages with product images, descriptions, and live prices.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#FFF3EC; border:1px solid #FFD5B8;">
+        <p class="text-xs font-bold text-orange-500 uppercase tracking-wide">Commerce</p>
+        <p class="text-sm font-semibold text-slate-800">Cart &amp; Checkout</p>
+        <p class="text-xs text-slate-500">Add items, review cart, and complete secure payment — end-to-end in the app.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#FFF3EC; border:1px solid #FFD5B8;">
+        <p class="text-xs font-bold text-orange-500 uppercase tracking-wide">Tracking</p>
+        <p class="text-sm font-semibold text-slate-800">Real-Time Order Status</p>
+        <p class="text-xs text-slate-500">Live order status updates from acceptance to delivery — no refresh needed.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#FFF3EC; border:1px solid #FFD5B8;">
+        <p class="text-xs font-bold text-orange-500 uppercase tracking-wide">History</p>
+        <p class="text-sm font-semibold text-slate-800">Order History</p>
+        <p class="text-xs text-slate-500">Full past-order log with status and details — reorder with one tap.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#FFF3EC; border:1px solid #FFD5B8;">
+        <p class="text-xs font-bold text-orange-500 uppercase tracking-wide">Alerts</p>
+        <p class="text-sm font-semibold text-slate-800">Push Notifications</p>
+        <p class="text-xs text-slate-500">Real-time push alerts for order confirmations, dispatch, and delivery events.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#FFF3EC; border:1px solid #FFD5B8;">
+        <p class="text-xs font-bold text-orange-500 uppercase tracking-wide">Account</p>
+        <p class="text-sm font-semibold text-slate-800">User Profile</p>
+        <p class="text-xs text-slate-500">Manage personal details, saved addresses, and preferences in a clean profile screen.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#FFF3EC; border:1px solid #FFD5B8;">
+        <p class="text-xs font-bold text-orange-500 uppercase tracking-wide">Navigation</p>
+        <p class="text-sm font-semibold text-slate-800">Bottom Tab Bar</p>
+        <p class="text-xs text-slate-500">Home · Search · Orders · Dashboard · Profile — always one tap away.</p>
+      </div>
+    </div>
+
+    <!-- SHOP OWNER panel -->
+    <div class="feat-panel for-owner grid-cols-4 gap-3 flex-1" style="grid-template-rows: repeat(2, 1fr);">
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#F0FDF4; border:1px solid #BBF7D0;">
+        <p class="text-xs font-bold text-green-600 uppercase tracking-wide">Setup</p>
+        <p class="text-sm font-semibold text-slate-800">Shop Registration</p>
+        <p class="text-xs text-slate-500">Register as a shop owner and submit for admin approval — with logo and cover image upload.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#F0FDF4; border:1px solid #BBF7D0;">
+        <p class="text-xs font-bold text-green-600 uppercase tracking-wide">Profile</p>
+        <p class="text-sm font-semibold text-slate-800">Shop Management</p>
+        <p class="text-xs text-slate-500">Edit name, address, contact details, business hours, logo, and cover image anytime.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#F0FDF4; border:1px solid #BBF7D0;">
+        <p class="text-xs font-bold text-green-600 uppercase tracking-wide">Catalogue</p>
+        <p class="text-sm font-semibold text-slate-800">Product Management</p>
+        <p class="text-xs text-slate-500">Add, edit, and delete menu items with images, prices, descriptions, and inventory counts.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#F0FDF4; border:1px solid #BBF7D0;">
+        <p class="text-xs font-bold text-green-600 uppercase tracking-wide">Fulfilment</p>
+        <p class="text-sm font-semibold text-slate-800">Order Management</p>
+        <p class="text-xs text-slate-500">Receive incoming orders — accept, reject, or mark complete with a single tap.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#F0FDF4; border:1px solid #BBF7D0;">
+        <p class="text-xs font-bold text-green-600 uppercase tracking-wide">Stock</p>
+        <p class="text-sm font-semibold text-slate-800">Inventory Management</p>
+        <p class="text-xs text-slate-500">Track and update item availability to prevent overselling and manage stock in real time.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#F0FDF4; border:1px solid #BBF7D0;">
+        <p class="text-xs font-bold text-green-600 uppercase tracking-wide">Analytics</p>
+        <p class="text-sm font-semibold text-slate-800">Sales Dashboard</p>
+        <p class="text-xs text-slate-500">At-a-glance view of Total Orders, Total Revenue, Active Products, and Customer Reviews.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#F0FDF4; border:1px solid #BBF7D0;">
+        <p class="text-xs font-bold text-green-600 uppercase tracking-wide">Reports</p>
+        <p class="text-sm font-semibold text-slate-800">Revenue Reporting</p>
+        <p class="text-xs text-slate-500">Track revenue trends and order volumes over time to plan stock and staffing decisions.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#F0FDF4; border:1px solid #BBF7D0;">
+        <p class="text-xs font-bold text-green-600 uppercase tracking-wide">Reputation</p>
+        <p class="text-sm font-semibold text-slate-800">Customer Reviews</p>
+        <p class="text-xs text-slate-500">View ratings and reviews left by customers to monitor shop quality and reputation.</p>
+      </div>
+    </div>
+
+    <!-- ADMIN panel -->
+    <div class="feat-panel for-admin grid-cols-4 gap-3 flex-1" style="grid-template-rows: repeat(2, 1fr);">
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#F8FAFC; border:1px solid #CBD5E1;">
+        <p class="text-xs font-bold text-slate-500 uppercase tracking-wide">Governance</p>
+        <p class="text-sm font-semibold text-slate-800">Shop Approvals</p>
+        <p class="text-xs text-slate-500">Review and approve or reject shop owner registrations before they go live on the platform.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#F8FAFC; border:1px solid #CBD5E1;">
+        <p class="text-xs font-bold text-slate-500 uppercase tracking-wide">Users</p>
+        <p class="text-sm font-semibold text-slate-800">User Management</p>
+        <p class="text-xs text-slate-500">View, suspend, and activate customer and shop owner accounts across the platform.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#F8FAFC; border:1px solid #CBD5E1;">
+        <p class="text-xs font-bold text-slate-500 uppercase tracking-wide">Shops</p>
+        <p class="text-sm font-semibold text-slate-800">Shop Management</p>
+        <p class="text-xs text-slate-500">Monitor all shops on the platform — suspend or reactivate accounts as needed.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#F8FAFC; border:1px solid #CBD5E1;">
+        <p class="text-xs font-bold text-slate-500 uppercase tracking-wide">Orders</p>
+        <p class="text-sm font-semibold text-slate-800">Order Oversight</p>
+        <p class="text-xs text-slate-500">Monitor all orders across the platform and intervene where escalation is needed.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#F8FAFC; border:1px solid #CBD5E1;">
+        <p class="text-xs font-bold text-slate-500 uppercase tracking-wide">Insights</p>
+        <p class="text-sm font-semibold text-slate-800">Platform Analytics</p>
+        <p class="text-xs text-slate-500">Aggregate analytics across all shops, orders, users, and revenue — platform-wide view.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#F8FAFC; border:1px solid #CBD5E1;">
+        <p class="text-xs font-bold text-slate-500 uppercase tracking-wide">Comms</p>
+        <p class="text-sm font-semibold text-slate-800">Push Notifications</p>
+        <p class="text-xs text-slate-500">Send targeted push notifications to customers, shop owners, or the entire platform.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#F8FAFC; border:1px solid #CBD5E1;">
+        <p class="text-xs font-bold text-slate-500 uppercase tracking-wide">Access</p>
+        <p class="text-sm font-semibold text-slate-800">Account Controls</p>
+        <p class="text-xs text-slate-500">Suspend or reactivate any customer or shop account to enforce platform policies.</p>
+      </div>
+      <div class="p-4 rounded-xl flex flex-col gap-1" style="background:#F8FAFC; border:1px solid #CBD5E1;">
+        <p class="text-xs font-bold text-slate-500 uppercase tracking-wide">Security</p>
+        <p class="text-sm font-semibold text-slate-800">Secure Admin Login</p>
+        <p class="text-xs text-slate-500">Dedicated secure admin authentication — separate from customer and shop owner access.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
